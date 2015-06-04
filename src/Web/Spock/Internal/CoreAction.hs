@@ -72,7 +72,7 @@ cookie name =
       parseCookie = first T.init . T.breakOnEnd "="
 {-# INLINE cookie #-}
 
--- | Tries to dected the preferred format of the response using the Accept header
+-- | Tries to detect the preferred format of the response using the Accept header
 preferredFormat :: MonadIO m => ActionT m ClientPreferredFormat
 preferredFormat =
   do mAccept <- header "accept"
